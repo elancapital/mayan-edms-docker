@@ -70,7 +70,7 @@ ENV MAYAN_MEDIA=/usr/local/lib/python2.7/dist-packages/mayan/media
 RUN pip install -U pip
 
 # Install Mayan EDMS, latest production release
-RUN pip install mayan-edms==$MAYAN_VERSION
+RUN pip install git+git://github.com/elancapital/mayan-edms.git@disclaimer
 
 # Install Python clients for PostgreSQL, REDIS, librabbitmq and uWSGI
 RUN pip install psycopg2 redis uwsgi mysql-python librabbitmq

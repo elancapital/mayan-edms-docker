@@ -22,6 +22,7 @@ apt-get install -y --no-install-recommends \
         gcc \
         gettext-base \
         ghostscript \
+        git \
         gpgv \
         graphviz \
         libjpeg-dev \

@@ -1,0 +1,21 @@
+server {
+    listen 80;
+
+    location / {
+        include uwsgi_params;
+        uwsgi_pass unix:/run/mayan.sock;
+
+        client_max_body_size ${MAYAN_NGINX_CLIENT_MAX_BODY_SIZE};
+        proxy_read_timeout ${MAYAN_NGINX_PROXY_READ_TIMEOUT};
+    }
+
+    location /static {
+        alias /usr/local/lib/python2.7/dist-packages/mayan/media/static;
+        expires 1h;
+    }
+
+    location /favicon.ico {
+        alias /usr/local/lib/python2.7/dist-packages/mayan/media/static/appearance/images/favicon.ico;
+        expires 1h;
+    }
+}

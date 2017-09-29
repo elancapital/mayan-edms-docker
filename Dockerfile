@@ -43,6 +43,7 @@ apt-get install -y --no-install-recommends \
         redis-server \
         supervisor \
         tesseract-ocr \
+        vim \
 
 && \
 

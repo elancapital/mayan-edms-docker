@@ -36,7 +36,7 @@ logging.config.dictConfig(
             'mayan': {
                 'handlers': ['console'],
                 'propagate': True,
-                'level': 'INFO',
+                'level': 'DEBUG',
             }
         }
     }

@@ -80,7 +80,6 @@ RUN pip install psycopg2 redis uwsgi mysql-python librabbitmq
 # Install Django storages alternate file storages
 RUN pip install django-storages boto boto3
 
-
 # Collect static files
 RUN mayan-edms.py collectstatic --noinput
 
